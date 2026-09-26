@@ -22,6 +22,39 @@
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
 
+        .marca-logo {
+            position: relative;
+            width: 92px;
+            height: 92px;
+            margin: 0 auto 22px;
+            border-radius: 18px;
+            background: #102a43;
+            border-right: 7px solid #d9ad50;
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.24);
+            font-family: Georgia, 'Times New Roman', serif;
+            line-height: 1;
+        }
+
+        .marca-logo .letra-r {
+            position: absolute;
+            right: 12px;
+            bottom: 7px;
+            color: #d9ad50;
+            font-size: 78px;
+            font-weight: 700;
+        }
+
+        .marca-logo .letra-f {
+            position: absolute;
+            top: 4px;
+            left: 27px;
+            z-index: 1;
+            color: #dfe7ed;
+            font-size: 52px;
+            font-weight: 700;
+            text-shadow: 2px 2px 0 #102a43;
+        }
+
         header h1 {
             margin: 0;
             font-size: 2.6rem;
@@ -244,6 +277,10 @@
 <body>
 
     <header>
+        <div class="marca-logo" aria-label="Logo Freddy Romero">
+            <span class="letra-r">R</span>
+            <span class="letra-f">F</span>
+        </div>
         <h1>Marido DE Aluguel</h1>
         <p class="subtitulo">Soluções Rápidas e Manutenção em Curitiba</p>
     </header>
