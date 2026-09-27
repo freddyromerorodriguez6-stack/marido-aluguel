@@ -18,7 +18,7 @@
             background: linear-gradient(135deg, #0f172a 0%, #0284c7 100%);
             color: #ffffff;
             text-align: center;
-            padding: 60px 20px 80px 20px;
+            padding: 100px 20px 80px 20px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
 
@@ -255,15 +255,30 @@
             align-items: center;
             justify-content: center;
             gap: 10px;
+            position: fixed;
+            top: max(16px, env(safe-area-inset-top));
+            right: 20px;
+            z-index: 1000;
             background-color: #25D366;
             color: #ffffff;
-            padding: 16px 32px;
+            padding: 16px 24px;
             text-decoration: none;
             font-size: 1.2rem;
             font-weight: bold;
             border-radius: 50px;
             box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
-            width: 80%;
+            width: auto;
+            max-width: calc(100vw - 40px);
+            transition: transform 0.2s ease;
+        }
+
+        .btn-whatsapp:hover {
+            transform: translateY(-2px);
+        }
+
+        .btn-whatsapp:focus-visible {
+            outline: 3px solid #0f172a;
+            outline-offset: 3px;
         }
 
         footer {
@@ -277,7 +292,7 @@
 <body>
 
     <header>
-        <div class="marca-logo" aria-label="Logo Freddy Romero">
+        <div class="marca-logo" role="img" aria-label="Logo Freddy Romero">
             <span class="letra-r">R</span>
             <span class="letra-f">F</span>
         </div>
@@ -359,7 +374,7 @@
         <section class="contato-container">
             <h2>Orçamento Rápido via WhatsApp</h2>
             <p>Atendemos Curitiba e Região Metropolitana. Facilitamos o pagamento via Pix ou Cartão!</p>
-            <a href="https://wa.me" target="_blank" class="btn-whatsapp">
+            <a href="https://wa.me/5541998553665" target="_blank" rel="noopener noreferrer" class="btn-whatsapp">
                 💬 Chamar no WhatsApp
             </a>
         </section>
